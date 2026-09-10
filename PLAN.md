@@ -1,6 +1,6 @@
 # Kids Coloring — Kế hoạch phát triển Android + backend AI
 
-Phiên bản: 2.0 — Cập nhật: 10/09/2026
+Phiên bản: 2.1 — Cập nhật: 10/09/2026
 
 Repo mục tiêu: https://github.com/thanhtungtav4/Kids-Coloring
 
@@ -8,13 +8,15 @@ Tài liệu kỹ thuật viết bằng tiếng Việt cho đội phát triển; 
 
 Tên dự án nội bộ: Kids Coloring. Tên thương mại chưa chốt. Tintilo chỉ là ý tưởng, chưa kiểm tra nhãn hiệu, tên miền hoặc tên trên cửa hàng.
 
-Bản 2.0 thay định hướng nhiều lứa tuổi bằng trẻ em; rút bản thử xuống một chế độ và 10 tranh; bổ sung kiểm chứng toàn bộ lô AI, hợp đồng dữ liệu, quyền tải nội dung và thử nghiệm thương mại.
+Bản 2.1 tiếp tục định hướng trẻ em; giữ bản thử ở một chế độ và 10 tranh; bổ sung pipeline AI chỉ publish sau duyệt, contract cho `app/`/`backend/`, và giả thuyết thương mại Free + Premium theo tháng với quảng cáo có điều kiện.
 
 ## 1. Mục tiêu và quyết định nền tảng
 
 Xây ứng dụng tô màu dành cho trẻ em: bé chọn một bức tranh, chọn màu rồi chạm vào từng vùng để hoàn thiện tranh. Người chơi là trẻ; người quyết định cài đặt và mua là phụ huynh. Android trước; có thể mở rộng iOS sau. Backend quản lý nội dung, gọi AI tạo tranh, kiểm duyệt, phát hành bộ tranh và xác minh mua hàng nếu triển khai thu phí.
 
-AI là công cụ sản xuất nội dung cho quản trị viên, không phải chatbot hoặc ô nhập prompt cho trẻ em.
+AI là công cụ sản xuất nội dung cho quản trị viên, không phải chatbot hoặc ô nhập prompt cho trẻ em. Ảnh AI phải qua kiểm tra tự động và duyệt người trước khi được đưa vào catalog mà app nhìn thấy.
+
+Mô hình thương mại cần kiểm chứng là **Free + Premium theo tháng**: người dùng Free có một phần tranh và quảng cáo không gây gián đoạn ở Library; Premium mở kho tranh, tranh mới và không có quảng cáo. Bản thử kỹ thuật vẫn tắt cả quảng cáo lẫn thanh toán.
 
 ### Giả định lập kế hoạch
 
@@ -24,7 +26,7 @@ AI là công cụ sản xuất nội dung cho quản trị viên, không phải 
 - Quốc gia phát hành đầu tiên chưa chốt; không mặc định mở toàn bộ thị trường. Chọn một nhóm quốc gia sau đánh giá nội dung, hỗ trợ, dữ liệu và chi phí thu hút người dùng.
 - Bé không cần đăng nhập để tô; tiến trình lưu trên máy. Tài khoản phụ huynh khi mua là phương án cần chốt riêng ở mục 11.3.
 - Phát hành thử APK; bản thương mại ưu tiên Google Play, không lấy phân phối APK ngoài cửa hàng làm mô hình chính.
-- Kiếm tiền là mục tiêu đã chốt; phương án mua bộ tranh là đề xuất cần kiểm chứng với phụ huynh, chưa phải lựa chọn đã xác nhận. Quảng cáo là nhánh có điều kiện, tắt trong bản thử.
+- Kiếm tiền là mục tiêu đã chốt; giả thuyết chính là Free + Premium theo tháng, cần kiểm chứng với phụ huynh. Gói mua một lần/lifetime là phương án dự phòng. Quảng cáo chỉ được bật sau khi kiểm tra chính sách trẻ em, vị trí hiển thị và chất lượng quảng cáo; tắt trong bản thử.
 - Những con số thời gian, hiệu năng và chi phí trong tài liệu là giả định/mục tiêu nội bộ, không phải báo giá hoặc cam kết doanh thu.
 
 ### Nguyên tắc giữ phạm vi
@@ -46,8 +48,8 @@ AI là công cụ sản xuất nội dung cho quản trị viên, không phải 
 | Nội dung | Bản thử: 10 tranh, 3 chủ đề; bản thương mại: mục tiêu 30 tranh | Hàng trăm tranh, thêm chủ đề theo nhu cầu |
 | Offline | 6 tranh có sẵn; 4 tranh tải từ backend ở bản thử | Đồng bộ tiến trình nhiều thiết bị |
 | AI | Tạo bản nháp, xử lý vùng, duyệt thủ công | Tạo tranh trực tiếp cho người chơi |
-| Thu phí | Chưa thu ở bản thử; một bộ mua một lần là phương án thương mại đề xuất | Thuê bao, tiền ảo |
-| Quảng cáo | Tắt trong bản thử nghiệm và mặc định lúc ra mắt | Thí điểm có kiểm soát sau khi đạt điều kiện |
+| Thu phí | Bản thử tắt thanh toán; chuẩn bị một sản phẩm Premium theo tháng trên Play Console test | Gói lifetime, bộ mua một lần, tiền ảo |
+| Quảng cáo | Bản thử tắt quảng cáo; chỉ pilot banner/nội dung không gây gián đoạn cho Free | Interstitial dày, quảng cáo trong editor, rewarded tự động |
 | Tài khoản | Alpha: chỉ tài khoản admin, bé không đăng nhập | Tài khoản phụ huynh là lựa chọn có điều kiện trước commerce |
 | Hạ tầng | Một backend, worker riêng theo tiến trình, storage | Microservices, Kubernetes, GPU tự vận hành |
 | Chia sẻ | Lưu ảnh cục bộ trong khu vực phù hợp | Feed cộng đồng, upload tranh, bình luận |
@@ -65,6 +67,7 @@ Bản thương mại dự kiến 30 tranh, thêm đại dương, khủng long v�
 - Nhóm “Tô tiếp” đứng trước “Tranh mới”.
 - Thẻ tranh gồm ảnh mẫu, trạng thái đã tải và tiến độ. Ở bản thử không có khóa; khi thương mại hóa, thông tin bán hàng tập trung trong khu vực phụ huynh.
 - Chạm một tranh có quyền để tải và mở. Bé không bị đẩy thẳng vào màn mua hoặc lời mời xem quảng cáo; quản lý bộ tranh trong khu vực phụ huynh.
+- Người dùng Free có thể thấy tối đa một vị trí quảng cáo không gây gián đoạn ở Library; Premium không tải hoặc hiển thị vị trí quảng cáo. Không đặt quảng cáo trong editor, trên canvas, trong popup hoàn thành hoặc ngay lúc mở app.
 - Khi mất mạng, vẫn hiển thị tranh có sẵn và đã tải. Tranh chưa tải ghi rõ cần mạng.
 
 ### 3.2 Màn tô màu
@@ -133,11 +136,26 @@ Không truyền từng lần chạm tô về server. App đã tải tranh phải
 
 ### 4.3 Tổ chức mã nguồn dự kiến
 
-- `mobile/`: app Flutter và kiểm thử renderer.
-- `backend/`: Laravel, admin, API, jobs, migrations.
-- `image-worker/`: bộ xử lý ảnh và kiểm thử dữ liệu.
-- `contracts/`: schema manifest, OpenAPI và fixture dùng chung.
-- `docs/`: quyết định kiến trúc, hướng dẫn vận hành, checklist phát hành.
+```text
+app/                         # Flutter client cho Android trước, iOS sau
+├── lib/core/                 # config, routing, API client, local database
+├── lib/features/             # onboarding, library, editor, my_art, parent, paywall
+└── test/                     # widget, renderer, offline và contract tests
+
+backend/                     # Laravel API + admin + workers
+├── app/Modules/              # Catalog, AIContent, Review, Publishing, Progress, Billing
+├── app/Jobs/                 # queue jobs, retry và idempotency
+├── app/Services/             # AI provider, image pipeline, storage, Play Billing
+├── image-worker/             # Python/OpenCV xử lý outline, region-map và manifest
+├── database/migrations/      # schema database
+├── routes/                   # public API và admin API tách vùng xác thực
+└── tests/                    # API, pipeline, publish, billing và security
+
+contracts/                   # OpenAPI, manifest schema, fixtures dùng chung
+docs/                        # quyết định kiến trúc, vận hành, release checklist
+```
+
+Không tạo hoặc triển khai các thư mục trên trong giai đoạn lập plan. Đây là layout mục tiêu để tránh nhầm `mockup/` với app production.
 
 Khóa phiên bản SDK/framework/package sau thử nghiệm ban đầu. Chưa chọn phiên bản cụ thể trong kế hoạch để tránh giả định sai tương thích Filament, Flutter, Billing và Android SDK.
 
@@ -194,7 +212,7 @@ ZIP là phương án đóng gói đề xuất. Trước giải nén phải giớ
 - Định nghĩa vùng nền được tô/không tô trong manifest; vùng có lỗ không được tô xuyên.
 - Fixture riêng cho mép anti-alias, vùng sát nhau và đường viền bán trong suốt. Phần màu có thể mở rộng có kiểm soát dưới lớp nét để tránh viền trắng, không thay ID tương tác của vùng khác.
 - `schema_version` mô tả định dạng; `asset_version` mô tả một bản tranh. App kiểm tra khả năng đọc trước tải.
-- Đây là đề xuất định dạng phải được POC xác nhận trước khi backend/mobile triển khai độc lập.
+- Đây là đề xuất định dạng phải được POC xác nhận trước khi `backend/` và `app/` triển khai độc lập.
 
 ### 6.4 Thiết kế renderer
 
@@ -280,6 +298,8 @@ MVP không xây một trình Illustrator trong admin. Đợt đầu chỉ cần 
 | `store_products` | Store/product ID và quyền mở bộ tranh |
 | `purchases` | Token bảo vệ phù hợp, trạng thái xác minh/acknowledge/hoàn tiền |
 | `entitlements` | Quyền truy cập đã xác minh và căn cứ cấp quyền |
+| `subscription_plans` | Product ID, chu kỳ tháng, giá hiển thị, trạng thái |
+| `ad_configs` | Placement, enabled, audience, max content rating, thời điểm áp dụng |
 | `audit_logs` | Hành động quản trị, đối tượng, thời gian |
 
 Dữ liệu hình học vùng để trong gói version, chưa cần mỗi pixel hoặc mỗi span là một hàng SQL. Không tạo bảng người chơi/thiết bị chỉ để đếm lượt tô.
@@ -297,7 +317,17 @@ Dữ liệu hình học vùng để trong gói version, chưa cần mỗi pixel 
 | `POST /api/v1/purchases/restore` | Khôi phục quyền từ giao dịch đang sở hữu | Xác minh server |
 | `POST /api/v1/store/notifications` | Nhận thông báo giao dịch | Xác thực nguồn server |
 
-API admin nằm trong vùng xác thực riêng. Không có endpoint public gọi AI.
+API admin/worker nằm trong vùng xác thực riêng:
+
+| Endpoint | Mục đích | Quyền |
+|---|---|---|
+| `POST /api/v1/admin/generation-jobs` | Tạo lô AI bất đồng bộ | Admin/editor |
+| `GET /api/v1/admin/generation-jobs` | Theo dõi job và chi phí | Admin/editor |
+| `GET /api/v1/admin/pictures` | Xem bản nháp, review và version | Admin/editor/reviewer |
+| `POST /api/v1/admin/content-reviews` | Ghi kết quả duyệt/reject | Reviewer |
+| `POST /api/v1/admin/publications` | Publish hoặc rollback version đã duyệt | Publisher |
+
+API app chỉ query `PUBLISHED` ở server-side. Không có endpoint public gọi AI, đọc prompt, đọc moderation result hoặc xem asset nháp.
 
 Quy ước: ID ổn định; ngày UTC; mã lỗi có cấu trúc; phân trang cursor; giới hạn page size; ETag cho catalog; giới hạn body. Remote config chỉ điều khiển nội dung/tính năng đã được kiểm thử, không tải code hoặc bật quảng cáo chưa được khai báo.
 
@@ -319,18 +349,21 @@ Quy ước: ID ổn định; ngày UTC; mã lỗi có cấu trúc; phân trang c
 
 ### 11.1 Giả thuyết thương mại và thứ tự kiểm chứng
 
-1. APK thử nghiệm: miễn phí, không quảng cáo, chưa thu tiền.
-2. Google Play thử nghiệm: tích hợp một sản phẩm mua bộ tranh không tiêu hao, dùng giao dịch test.
-3. Thử với phụ huynh một bộ tranh cụ thể, giá và giá trị họ nhận. Nếu chọn mô hình IAP, bản thương mại có thể dùng 15 tranh miễn phí + bộ 15 tranh trả phí; mô tả mua bộ hiện tại, không bao gồm mọi bộ tương lai.
-4. Khi có phản hồi: thêm bộ mới; thử mô hình quảng cáo chỉ sau đánh giá kỹ.
+1. APK thử nghiệm: Free, không quảng cáo, không thanh toán.
+2. Google Play closed test: tạo một subscription Premium theo tháng, dùng giao dịch test và nhóm tester là phụ huynh.
+3. Soft launch: Free có catalog giới hạn và tối đa một vị trí quảng cáo ở Library; Premium mở toàn bộ pack, tranh mới và remove ads.
+4. Đo tỷ lệ bắt đầu trial/mua, hủy, restore, refund, chi phí nội dung và phản hồi phụ huynh trước khi mở rộng.
+5. Nếu người dùng không cảm nhận được giá trị cập nhật hàng tháng, chuyển sang gói mua một lần/lifetime hoặc bán từng picture pack.
 
-Chưa dùng thuê bao, vé ngày, xu hoặc mở tranh 24 giờ. Những cơ chế đó làm phức tạp quyền offline, UX trẻ em và hỗ trợ khách hàng. Mục tiêu không phải tăng số lần bấm quảng cáo bằng mọi giá.
+Không dùng vé ngày, xu, mở tranh 24 giờ hoặc bắt trẻ xem quảng cáo để tiếp tục tô. Mục tiêu là tạo giá trị cho phụ huynh, không tối đa hóa số lần bấm quảng cáo.
 
 ### 11.2 Luồng mua
 
-App mở giao diện mua của Google Play → nhận purchase token → backend xác minh trạng thái và sản phẩm → cấp quyền idempotent → acknowledge → app tải bộ tranh.
+App mở Google Play Billing → nhận purchase token → backend xác minh package/product/user và trạng thái subscription → cấp entitlement idempotent → acknowledge → app tải bộ tranh Premium.
 
-Không cấp quyền khi `PENDING`; xử lý callback lặp, lỗi mạng, hoàn tiền và khôi phục. Purchase token cần chống xử lý trùng và không xuất hiện trong log thông thường. Hướng xử lý server dựa trên hướng dẫn bảo vệ giao dịch của Google. [Google Play Billing security](https://developer.android.com/google/play/billing/security)
+Không cấp quyền khi `PENDING`; xử lý callback lặp, lỗi mạng, hủy, hết hạn, grace period, pause, refund và restore. Purchase token cần chống xử lý trùng và không xuất hiện trong log thông thường. Hướng xử lý server dựa trên hướng dẫn bảo vệ giao dịch của Google. [Google Play Billing security](https://developer.android.com/google/play/billing/security)
+
+Trạng thái entitlement tối thiểu: `ACTIVE`, `GRACE_PERIOD`, `PAUSED`, `EXPIRED`, `REVOKED`. App có thể dùng quyền đã cache trong thời gian ngắn khi offline; lần xác minh lại phải do backend quyết định.
 
 Không có tài khoản app vẫn cần thiết kế restore: ứng dụng truy vấn giao dịch qua tài khoản Google Play trên máy và gửi bằng chứng tới backend. Mã cài đặt local không phải căn cứ sở hữu. Quyền mua và tiến trình là hai thứ riêng: khôi phục quyền không khôi phục tranh đã tô nếu dữ liệu local bị xóa. Bảo vệ chống replay, token bị đánh cắp và cách ánh xạ quyền phải được kiểm thử trước thu tiền thật; cân nhắc tài khoản phụ huynh nếu cần đồng bộ/kiểm soát sở hữu mạnh hơn.
 
@@ -353,7 +386,7 @@ Không coi token hợp lệ là đủ chứng minh người gửi hiện tại s
 
 ### 11.4 Quảng cáo là hạng mục có điều kiện
 
-Đề xuất sản phẩm: không quảng cáo trong màn tô; chưa bật quảng cáo ở bản ra mắt. Nếu triển khai sau, cần ma trận nhóm tuổi/quốc gia/SDK, cấu hình phục vụ trẻ em và cơ chế tắt từ xa. Khu vực phụ huynh hoặc việc chọn “tranh chi tiết” không tự làm quảng cáo trở nên hợp lệ.
+Đề xuất sản phẩm: Free có tối đa một banner/native placement ở Library, Premium không có quảng cáo; tuyệt đối không quảng cáo trong màn tô, canvas, popup hoàn thành hoặc ngay lúc mở app. Chưa bật quảng cáo trong APK thử và chỉ pilot sau khi có ma trận nhóm tuổi/quốc gia/SDK, cấu hình phục vụ trẻ em, privacy copy và cơ chế tắt từ xa. Khu vực phụ huynh hoặc việc chọn “tranh chi tiết” không tự làm quảng cáo trở nên hợp lệ.
 
 Google Play yêu cầu app có trẻ em trong đối tượng tuân thủ Families; quảng cáo cho trẻ hoặc người chưa rõ tuổi phải dùng phiên bản SDK tự chứng nhận, không cá nhân hóa. Quảng cáo gây gián đoạn, kể cả rewarded, phải đóng được sau 5 giây. Không được đặt quảng cáo gây bấm nhầm. [Google Play Families](https://support.google.com/googleplay/android-developer/answer/9893335?hl=en)
 
