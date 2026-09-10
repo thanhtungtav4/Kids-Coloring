@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 700" role="img" aria-labelledby="title desc">
+  <title id="title">A moonlit night coloring page</title>
+  <desc id="desc">A crescent moon, stars, and a tiny cloud</desc>
+  <rect width="700" height="700" fill="white"/>
+  <path d="M383 112q-104 78-67 195 34 112 153 110 65-1 113-49-38 116-159 132-145 19-209-103-65-123 17-224 63-77 152-61Z" fill="white" stroke="#23385c" stroke-width="10" stroke-linejoin="round"/>
+  <path d="m189 139 14 33 36 3-27 23 8 35-31-18-31 18 8-35-27-23 36-3Z" fill="white" stroke="#23385c" stroke-width="9" stroke-linejoin="round"/>
+  <path d="m526 170 11 26 29 3-22 18 7 28-25-14-25 14 7-28-22-18 29-3Z" fill="white" stroke="#23385c" stroke-width="8" stroke-linejoin="round"/>
+  <path d="m505 389 12 28 30 3-23 19 7 29-26-15-26 15 7-29-23-19 30-3Z" fill="white" stroke="#23385c" stroke-width="8" stroke-linejoin="round"/>
+  <path d="M117 535q-8-58 49-61 26-57 78-10 72-15 73 55 0 47-47 47H163q-42 0-46-31Z" fill="white" stroke="#23385c" stroke-width="10" stroke-linejoin="round"/>
+  <path d="M178 563v48M254 563v48M105 611h190" fill="none" stroke="#23385c" stroke-width="9" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 700" role="img" aria-labelledby="title desc">
+  <title id="title">A happy whale coloring page</title>
+  <desc id="desc">A whale splashing above the waves</desc>
+  <rect width="700" height="700" fill="white"/>
+  <path d="M150 386q-38-85 41-147 91-72 222-17 104 43 137 137 17 49-11 82-34 40-105 37-96-3-175-51-54-33-109-41Z" fill="white" stroke="#23385c" stroke-width="10" stroke-linejoin="round"/>
+  <path d="M150 386q-66-15-87-62 64-4 107 39M260 467q-7 77-87 104 5-76 68-127M415 438q36 70 112 69-20-66-88-99" fill="white" stroke="#23385c" stroke-width="10" stroke-linejoin="round"/>
+  <circle cx="443" cy="285" r="12" fill="white" stroke="#23385c" stroke-width="8"/>
+  <path d="M518 245q-21-45 8-77M541 245q9-48 51-69M566 252q34-25 64-17" fill="none" stroke="#23385c" stroke-width="9" stroke-linecap="round"/>
+  <path d="M91 559q53-38 106 0t106 0 106 0 106 0 106 0M87 611q53-38 106 0t106 0 106 0 106 0 106 0" fill="none" stroke="#23385c" stroke-width="10" stroke-linecap="round"/>
+</svg>

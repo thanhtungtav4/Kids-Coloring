@@ -14,7 +14,7 @@ Mở http://localhost:8000 trên trình duyệt. Để xem bằng điện thoạ
 
 ## Các màn và thao tác
 
-- Chọn tranh: cáo, khủng long, tên lửa; lọc theo chủ đề.
+- Chọn tranh: 9 tranh line-art gồm cáo, mèo, tên lửa, mặt trăng, xe hơi, lâu đài, kỳ lân, khủng long và cá voi; lọc theo chủ đề.
 - Chạm vùng để tô, 12 màu, hoàn tác/làm lại, xem mẫu và tô lại.
 - Tự lưu tiến trình trên trình duyệt, xem My art và xuất ảnh PNG.
 - Khu vực phụ huynh, giảm chuyển động và luồng mua mô phỏng.
@@ -27,7 +27,7 @@ Mở http://localhost:8000 trên trình duyệt. Để xem bằng điện thoạ
 - `styles.css`: CSS nền.
 - `mobile.css`: lớp thiết kế ưu tiên điện thoại.
 - `tokens.css`: màu, font và thông số giao diện.
-- `assets/`: ba tranh mẫu PNG.
+- `assets/`: ba tranh PNG gốc và sáu tranh line-art SVG dùng cho các thẻ mở rộng.
 
 ## Phạm vi
 

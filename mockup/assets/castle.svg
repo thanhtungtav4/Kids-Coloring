@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 700" role="img" aria-labelledby="title desc">
+  <title id="title">A castle coloring page</title>
+  <desc id="desc">A cheerful castle with flags and a door</desc>
+  <rect width="700" height="700" fill="white"/>
+  <path d="M127 571V273h81v-54h63v54h76v-54h63v54h82v298Z" fill="white" stroke="#23385c" stroke-width="10" stroke-linejoin="round"/>
+  <path d="M127 273h81v-54h63v54h76v-54h63v54h82M127 342h365" fill="none" stroke="#23385c" stroke-width="9" stroke-linejoin="round"/>
+  <path d="M166 219V106h72M534 219V106h-72" fill="none" stroke="#23385c" stroke-width="9" stroke-linecap="round"/>
+  <path d="m238 106-52 33h52M462 106l52 33h-52" fill="white" stroke="#23385c" stroke-width="9" stroke-linejoin="round"/>
+  <path d="M177 396h54v67h-54zM469 396h54v67h-54z" fill="white" stroke="#23385c" stroke-width="9"/>
+  <path d="M302 571V479q0-49 49-49t49 49v92Z" fill="white" stroke="#23385c" stroke-width="10"/>
+  <circle cx="374" cy="525" r="6" fill="#23385c"/>
+  <path d="M92 571h516M138 608h424" fill="none" stroke="#23385c" stroke-width="10" stroke-linecap="round"/>
+</svg>

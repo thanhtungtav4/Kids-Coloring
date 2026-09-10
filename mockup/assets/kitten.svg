@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 700" role="img" aria-labelledby="title desc">
+  <title id="title">A kitten coloring page</title>
+  <desc id="desc">A friendly kitten sitting with a ball of yarn</desc>
+  <rect width="700" height="700" fill="white"/>
+  <path d="M186 305 174 124l119 83q57-24 114 0l119-83-12 181q30 61 2 132-43 111-168 111T178 437q-28-71 8-132Z" fill="white" stroke="#23385c" stroke-width="10" stroke-linejoin="round"/>
+  <path d="M241 202 190 164l6 91M459 202l51-38-6 91" fill="white" stroke="#23385c" stroke-width="10" stroke-linejoin="round"/>
+  <path d="M256 326q15-19 30 0M414 326q15-19 30 0M338 352q12 11 24 0" fill="none" stroke="#23385c" stroke-width="10" stroke-linecap="round"/>
+  <path d="M349 378q-28 31-62 0M351 378q28 31 62 0" fill="white" stroke="#23385c" stroke-width="9" stroke-linecap="round"/>
+  <path d="M247 382 128 360M247 402 117 416M453 382l119-22M453 402l130 14" fill="none" stroke="#23385c" stroke-width="8" stroke-linecap="round"/>
+  <path d="M106 508q-24-72 46-72 70 0 46 72-23 68-92 0Z" fill="white" stroke="#23385c" stroke-width="10"/>
+  <path d="M119 486q42 22 74 0M124 525q38 22 66 0" fill="none" stroke="#23385c" stroke-width="7" stroke-linecap="round"/>
+</svg>

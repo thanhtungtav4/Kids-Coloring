@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 700" role="img" aria-labelledby="title desc">
+  <title id="title">A unicorn coloring page</title>
+  <desc id="desc">A gentle unicorn with a rainbow mane</desc>
+  <rect width="700" height="700" fill="white"/>
+  <path d="M182 515q-48-72-11-164 33-81 117-91l54-121 48 124q80 18 113 98 36 89-20 154-58 67-180 63-84-3-121-63Z" fill="white" stroke="#23385c" stroke-width="10" stroke-linejoin="round"/>
+  <path d="m340 139 39-101 34 117" fill="white" stroke="#23385c" stroke-width="9" stroke-linejoin="round"/>
+  <path d="M240 287q-11-73 43-116 8 57 48 82M434 260q62-32 80-90 42 52 1 117" fill="white" stroke="#23385c" stroke-width="9" stroke-linejoin="round"/>
+  <circle cx="295" cy="324" r="10" fill="white" stroke="#23385c" stroke-width="8"/>
+  <path d="M371 358q25 18 50 0M309 390q39 35 79 0" fill="none" stroke="#23385c" stroke-width="9" stroke-linecap="round"/>
+  <path d="M233 477q-38 64-30 113M469 481q35 59 26 109M163 592q42 26 83 0M433 592q40 26 80 0" fill="none" stroke="#23385c" stroke-width="10" stroke-linecap="round"/>
+  <path d="M112 172q29-25 58 0t58 0 58 0M111 214q29-25 58 0t58 0 58 0" fill="none" stroke="#23385c" stroke-width="8" stroke-linecap="round"/>
+</svg>

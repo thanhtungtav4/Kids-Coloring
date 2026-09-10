@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 700" role="img" aria-labelledby="title desc">
+  <title id="title">A little car coloring page</title>
+  <desc id="desc">A friendly car driving beneath a sun</desc>
+  <rect width="700" height="700" fill="white"/>
+  <path d="m135 408 61-119q16-30 54-30h170q35 0 56 31l73 118v87H135Z" fill="white" stroke="#23385c" stroke-width="10" stroke-linejoin="round"/>
+  <path d="m226 280 34-1h88v89H186Z" fill="white" stroke="#23385c" stroke-width="9" stroke-linejoin="round"/>
+  <path d="m358 279h53q24 0 38 22l42 67H358Z" fill="white" stroke="#23385c" stroke-width="9" stroke-linejoin="round"/>
+  <path d="M135 408h414M135 451h414" fill="none" stroke="#23385c" stroke-width="8"/>
+  <circle cx="218" cy="503" r="54" fill="white" stroke="#23385c" stroke-width="10"/>
+  <circle cx="218" cy="503" r="20" fill="white" stroke="#23385c" stroke-width="8"/>
+  <circle cx="484" cy="503" r="54" fill="white" stroke="#23385c" stroke-width="10"/>
+  <circle cx="484" cy="503" r="20" fill="white" stroke="#23385c" stroke-width="8"/>
+  <path d="M105 564h495M121 592h78M501 592h78" fill="none" stroke="#23385c" stroke-width="9" stroke-linecap="round"/>
+  <path d="M520 126q0 50-50 50t-50-50q0 50-50 50t-50-50q0 50-50 50t-50-50" fill="none" stroke="#23385c" stroke-width="8" stroke-linecap="round"/>
+</svg>
