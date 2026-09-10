@@ -17,6 +17,7 @@ Mở http://localhost:8000 trên trình duyệt. Để xem bằng điện thoạ
 - Chọn tranh: 9 tranh line-art gồm cáo, mèo, tên lửa, mặt trăng, xe hơi, lâu đài, kỳ lân, khủng long và cá voi; lọc theo chủ đề.
 - Chạm vùng để tô, 12 màu, hoàn tác/làm lại, xem mẫu và tô lại.
 - Tự lưu tiến trình trên trình duyệt, xem My art và xuất ảnh PNG.
+- Lần đầu mở app có onboarding; My art có gallery tranh đã tô và màn chi tiết để tiếp tục, lưu hoặc xóa.
 - Khu vực phụ huynh, giảm chuyển động và luồng mua mô phỏng.
 - Có thể dùng phím mũi tên để chọn vùng trên canvas, Enter/Space để tô.
 
@@ -26,6 +27,7 @@ Mở http://localhost:8000 trên trình duyệt. Để xem bằng điện thoạ
 - `app.js`: chuyển màn, tô màu, lưu local và xuất ảnh.
 - `styles.css`: CSS nền.
 - `mobile.css`: lớp thiết kế ưu tiên điện thoại.
+- `flow-screens.css`: onboarding và artwork detail.
 - `tokens.css`: màu, font và thông số giao diện.
 - `assets/`: ba tranh PNG gốc và sáu tranh line-art SVG dùng cho các thẻ mở rộng.
 
