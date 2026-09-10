@@ -42,7 +42,7 @@ button:active:not(:disabled){transform:translateY(2px);transition-duration:var(-
 .round-arrow .icon{width:17px;height:17px}
 .picture-featured{background:var(--tint);border-color:var(--tint);position:relative;display:grid;grid-template-columns:minmax(0,1fr);padding:var(--space-sm)}
 .picture-featured .picture-art{height:clamp(156px,48vw,216px);aspect-ratio:auto;background:var(--tint)}
-.picture-featured .picture-art canvas{width:auto;height:100%;aspect-ratio:1}
+.picture-featured .picture-art canvas{width:100%;height:clamp(156px,48vw,216px);aspect-ratio:auto;object-fit:contain}
 .picture-featured .level{top:var(--space-2xs);left:var(--space-2xs)}
 .picture-featured .picture-info{padding:var(--space-xs) var(--space-2xs) var(--space-md)}
 .picture-featured .picture-info h3{font-size:var(--text-xl);font-weight:900}
