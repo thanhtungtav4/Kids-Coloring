@@ -1,8 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="18" fill="#ffd44b"/>
-  <path d="M32 10a22 22 0 1 0 0 44h3a5 5 0 0 0 2-9.6 3.6 3.6 0 0 1 2-6.8h4a10 10 0 0 0 10-10C53 17 44 10 32 10Z" fill="none" stroke="#23385c" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="21" cy="27" r="2.5" fill="#23385c"/>
-  <circle cx="29" cy="19" r="2.5" fill="#23385c"/>
-  <circle cx="40" cy="21" r="2.5" fill="#23385c"/>
-  <circle cx="20" cy="37" r="2.5" fill="#23385c"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="tile" x1="24" y1="10" x2="104" y2="118" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFE36A"/><stop offset="1" stop-color="#F7BE2F"/>
+    </linearGradient>
+    <linearGradient id="palette" x1="36" y1="28" x2="92" y2="102" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#54A4FF"/><stop offset="1" stop-color="#1673D8"/>
+    </linearGradient>
+    <linearGradient id="handle" x1="79" y1="29" x2="105" y2="64" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4F9EFF"/><stop offset="1" stop-color="#0F65C8"/>
+    </linearGradient>
+    <linearGradient id="bristle" x1="58" y1="75" x2="72" y2="98" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFD36B"/><stop offset="1" stop-color="#B96A12"/>
+    </linearGradient>
+  </defs>
+  <rect x="5" y="5" width="118" height="118" rx="31" fill="url(#tile)"/>
+  <path d="M64 25c-25 0-42 15-42 37 0 24 20 41 45 41 7 0 13-4 13-10 0-5-4-8-1-13 2-4 7-5 13-5 13 0 20-7 20-19 0-18-19-31-48-31Z" fill="url(#palette)"/>
+  <circle cx="43" cy="48" r="7" fill="#F04444"/><circle cx="65" cy="38" r="7" fill="#276FD7"/>
+  <circle cx="39" cy="76" r="7" fill="#4BC95B"/><circle cx="67" cy="83" r="7" fill="#FFD52F"/>
+  <circle cx="38" cy="60" r="7" fill="#FFD34A"/>
+  <g transform="rotate(38 82 58)">
+    <rect x="76" y="25" width="13" height="43" rx="6.5" fill="url(#handle)"/>
+    <path d="M76 64h13v8H76z" fill="#B7C0CC"/>
+    <path d="M76 66h13M76 69h13" stroke="#7D8793" stroke-width="1.5"/>
+    <path d="M77 72h11c2 8-1 18-5.5 25-4.5-7-7.5-17-5.5-25Z" fill="url(#bristle)"/>
+  </g>
 </svg>

@@ -15,8 +15,8 @@ button:active:not(:disabled){transform:translateY(2px);transition-duration:var(-
 .shell{max-width:none;padding:env(safe-area-inset-top) var(--space-lg) calc(var(--nav-height) + env(safe-area-inset-bottom) + var(--space-xl));margin:0}
 .topbar{height:84px;gap:var(--space-sm)}
 .brand{font-size:1.25rem;font-weight:900;letter-spacing:-.045em;gap:var(--space-xs);min-width:0}
-.brandmark{width:36px;height:36px;border-radius:12px;transform:none;background:var(--color-mark);color:var(--color-ink);box-shadow:0 3px 0 var(--color-mark-deep)}
-.brandmark .icon{width:25px;height:25px}.brand-accent{color:var(--color-accent)}
+.brandmark{width:36px;height:36px;border-radius:0;transform:none;background:url('logo.svg') center/contain no-repeat;color:transparent;box-shadow:none}
+.brandmark .icon{display:none}.brand-accent{color:var(--color-accent)}
 .parent-btn{width:44px;height:44px;padding:var(--space-xs);display:grid;place-items:center;background:var(--color-accent-soft);color:var(--color-accent);border:1px solid var(--color-accent);border-radius:var(--radius-input);box-shadow:0 3px 0 var(--color-accent-deep);flex-shrink:0}
 .parent-btn span{display:none}.parent-btn .icon{width:20px;height:20px}
 .welcome{display:block;margin:var(--space-sm) 0 var(--space-xl)}
